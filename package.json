@@ -1,23 +1,35 @@
 {
-  "name": "projects",
-  "version": "1.0.0",
-  "description": "video server project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/njayman/videoserver.git"
-  },
-  "keywords": [
-    "video",
-    "server"
-  ],
-  "author": "njayman",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/njayman/videoserver/issues"
-  },
-  "homepage": "https://github.com/njayman/videoserver#readme"
+    "name": "videoserver",
+    "version": "1.0.0",
+    "description": "video server project",
+    "main": "index.js",
+    "scripts": {
+        "server:dev": "bun run --cwd server dev",
+        "client:dev": "bun run --cwd client  dev",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/njayman/videoserver.git"
+    },
+    "keywords": [
+        "video",
+        "server"
+    ],
+    "author": "njayman",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/njayman/videoserver/issues"
+    },
+    "homepage": "https://github.com/njayman/videoserver#readme",
+    "workspaces": [
+        "client",
+        "server"
+    ],
+    "devDependencies": {
+        "bun-types": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
 }
